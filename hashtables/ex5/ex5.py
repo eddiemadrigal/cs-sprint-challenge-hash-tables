@@ -10,6 +10,7 @@ def finder(files, queries):
     for path in files:                          # check all paths
         if path in cache:                       # if the path exists in cache
             result.append(path)                 # append the path to the cache dictionary
+            break                               # end. path is already in cache
         pathSplit = path.split('/')             # split string at '/' to create list
         lastItem = pathSplit[len(pathSplit) - 1]# get last item in the list
         if lastItem in queries:                 # if the last item in the array matches what is in the queries
