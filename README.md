@@ -23,11 +23,31 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+
+Hashing functions take an input (usually a string) and return an integer as an output. To convert a string into an integer, hashing functions operate on the individual characters that make up the string.
+
 2. Collision resolution
+
+Collisions occur when hash functions return the same integer for different inputs.  When this occurs, chain resolution is commonly used to allow each slot to hold a reference to a collection (or chain) of items.
+
 3. Performance of basic hash table operations
+
+Once we take collisions into account with our hash tables, the performance implications are a bit different. There may be times when search, insertion and delete operations take linear time O(n). However, the average casae is still contant time O(1). So, if we handle collisions well and we have a hashing function that does an excellent job of spreading the data evenly across the hash table, hash tables become very performant data structures.
+
 4. Load factor
+
+Hash tables use an array for storage, so the load factor would be the number of occupied slots divided by the length of the array. So, an array of length of 10 with three items in it has a load factor of 0.3
+
 5. Automatic resizing
+
+As the load factor of the hash table increases, so does the likelihood of a collision, which reduces the performance of the hash table.  Therefore, you need to monitor the load factor and resize your hash table when the load factor gets too large.  The general rule of thumb is to resize your hash table when your load factor is greater than 0.7
+
 6. Various use cases for hash tables
+
+a. Digital phone book (person's name to a phone number)
+b. DNS resolution (maps web address to IP address)
+c. Student records (unique id maps to student information)
+d. library system (a book's unique id maps to detailed book informaiton)
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
